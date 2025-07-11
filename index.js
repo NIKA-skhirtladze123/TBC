@@ -1,11 +1,10 @@
 import { books } from "./book.js";
 import { users } from "./user.js";
 
-let COUNT = 12; // for uniq id
 
 function addBook(name, author, ganre, date, rating) {
     const newBook = {
-        bookID: COUNT,
+        bookID: books.length + 1,
         name: name,
         author: author,
         ganre: ganre,
@@ -16,7 +15,6 @@ function addBook(name, author, ganre, date, rating) {
     };
 
     books.push(newBook);
-    COUNT++;
 };
 
 
